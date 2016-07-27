@@ -67,6 +67,37 @@ class GenericPopupViewController: UIViewController {
     convenience init(headerView: UIView, actions: [PopupAction]) {
         self.init()
         setupBasicView()
+        self.actions = actions
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.setNeedsLayout()
+        headerView.layoutIfNeeded()
+        headerView.bounds.size = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        
+        scrollViewContentContainer.addSubviewAndFill(headerView)
+        scrollView.addSubviewAndFill(scrollViewContentContainer)
+        scrollView.addConstraint(NSLayoutConstraint(item: scrollViewContentContainer, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1, constant: 0))
+        let size = scrollViewContentContainer.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        let heightConstraint = NSLayoutConstraint(item: scrollView, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height)
+        scrollView.addConstraint(heightConstraint)
+        
+        var previousButton: UIButton? = nil
+        for (index, action) in actions.enumerate() {
+            let button = UIButton(type: .System)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.backgroundColor = action.color
+            button.tag = index
+            button.addTarget(self, action: #selector(handleButtonTapped(_:)), forControlEvents: .TouchUpInside)
+            button.setTitle(action.title, forState: .Normal)
+            
+            let isLastOne = index == (actions.count - 1)
+            buttonsContainer.addSubview(button, underView: previousButton, isLastOne: isLastOne)
+            previousButton = button
+        }
+
+        let newSize = view.systemLayoutSizeFittingSize(UILayoutFittingExpandedSize)
+        view.bounds.size = newSize
+        
+        view.layoutIfNeeded()
     }
     
     private func setupBasicView() {

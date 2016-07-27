@@ -62,5 +62,20 @@ class ViewController: UIViewController {
         //        customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
         
     }
+    @IBAction func showWithHeaderView(sender: UIButton) {
+        let headerView = storyboard!.instantiateViewControllerWithIdentifier("Popup").view
+        let controller = GenericPopupViewController(headerView: headerView, actions: [
+            PopupAction(title: "Tap on me", color: UIColor.redColor(), action: {
+                print("done first action")
+            }),
+            PopupAction(title: "Tap on me too", color: UIColor.greenColor(), action: {
+                print("done second action")
+            })
+            ]
+        )
+        controller.transitioningDelegate = transitionHandler
+        controller.modalPresentationStyle = .Custom
+        presentViewController(controller, animated: true, completion: nil)
+    }
 }
 
