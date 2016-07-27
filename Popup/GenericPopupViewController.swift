@@ -40,6 +40,10 @@ class GenericPopupViewController: UIViewController {
         upperView.addSubviewAndFill(upperContainerView)
         upperView.addConstraint(NSLayoutConstraint(item: upperContainerView, attribute: .Width, relatedBy: .Equal, toItem: upperView, attribute: .Width, multiplier: 1, constant: 0))
         
+        let size = upperContainerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        let heightConstraint = NSLayoutConstraint(item: upperView, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height)
+        upperView.addConstraint(heightConstraint)
+
         var previousButton: UIButton? = nil
         for (index, action) in actions.enumerate() {
             let button = UIButton(type: .System)
@@ -54,7 +58,7 @@ class GenericPopupViewController: UIViewController {
             previousButton = button
         }
         
-        let newSize = view.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        let newSize = view.systemLayoutSizeFittingSize(UILayoutFittingExpandedSize)
         view.bounds.size = newSize
 
         view.layoutIfNeeded()
@@ -77,12 +81,9 @@ class GenericPopupViewController: UIViewController {
         
         upperView.translatesAutoresizingMaskIntoConstraints = false
         lowerView.translatesAutoresizingMaskIntoConstraints = false
-       
-        let heightConstraint = NSLayoutConstraint(item: upperView, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: height)
-        upperView.addConstraint(heightConstraint)
         
         container.addConstraint(NSLayoutConstraint(item: container, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: width))
-        container.addConstraint(NSLayoutConstraint(item: container, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: height))
+        container.addConstraint(NSLayoutConstraint(item: container, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: height))
 
         upperView.backgroundColor = UIColor.redColor()
         lowerView.backgroundColor = UIColor.blueColor()

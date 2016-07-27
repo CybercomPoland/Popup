@@ -81,15 +81,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksl-Kr-AWo">
-                                <rect key="frame" x="235" y="285" width="131" height="30"/>
-                                <state key="normal" title="Tap to show popup"/>
+                                <rect key="frame" x="251" y="285" width="98" height="30"/>
+                                <state key="normal" title="Too much text"/>
                                 <connections>
                                     <action selector="showPresenterPopup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5oG-QS-U3D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zW-rb-uGR">
-                                <rect key="frame" x="277" y="328" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="216" y="328" width="167" height="30"/>
+                                <state key="normal" title="Minimum amount of text"/>
                                 <connections>
                                     <action selector="showAlertView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gsj-T3-wev"/>
                                 </connections>

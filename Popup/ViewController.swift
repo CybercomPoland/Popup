@@ -44,9 +44,23 @@ class ViewController: UIViewController {
         
     }
     @IBAction func showAlertView(sender: AnyObject) {
-        let aVC = UIAlertController(title: "The value provided by the presentation controller’s delegate or UIModalPresentationNone if a delegate was not provided or does not return a valid value. ", message: "After the content managed by the presentation controller is onscreen, this method returns the presentation style to use when transitioning to a horizontally compact environment. This method is not meant to be overridden. The implementation consults its delegate object and returns the value provided by that object’s adaptivePresentationStyleForPresentationController: method. Some system-supplied presentation controllers may also provide a new style that is more suited for a compact environment. For example, presentation controllers that manage popovers and form sheets return the UIModalPresentationFullScreen value.", preferredStyle: .Alert)
-        aVC.addAction(UIAlertAction(title: "Test", style: .Default, handler: nil))
-        presentViewController(aVC, animated: true, completion: nil)
+        //let controller = storyboard?.instantiateViewControllerWithIdentifier("Popup") as! PopupViewController
+        let controller = GenericPopupViewController(title: "Test", subtitle: "Test", actions:
+            [
+                PopupAction(title: "Tap on me", color: UIColor.redColor(), action: {
+                    print("done first action")
+                }),
+                PopupAction(title: "Tap on me too", color: UIColor.greenColor(), action: {
+                    print("done second action")
+                })
+            ])
+        //let controller = GenericPopupViewController(title: "", subtitle: "", actions: [])
+        
+        controller.transitioningDelegate = transitionHandler
+        controller.modalPresentationStyle = UIModalPresentationStyle.Custom
+        presentViewController(controller, animated: true, completion: nil)
+        //        customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
+        
     }
 }
 
