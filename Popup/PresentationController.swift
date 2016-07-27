@@ -36,7 +36,7 @@ class PresentationController: UIPresentationController, UIAdaptivePresentationCo
     }
     
     override func sizeForChildContentContainer(container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
-        let newSize = presentedViewController.view.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        let newSize = presentedViewController.view.bounds.size
         return newSize
     }
     

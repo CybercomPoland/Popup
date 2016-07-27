@@ -55,7 +55,7 @@ class TransitionFactory {
         
         let animatingVC = presenting ? toVC : fromVC
         let animatingView = animatingVC.view
-        animatingView.bounds.size = animatingView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize) //this should be unnecessary (as size was set in PresentationController), but size is wrong without it
+        //animatingView.bounds.size = animatingView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize) //this should be unnecessary (as size was set in PresentationController), but size is wrong without it
         let underlyingVC = presenting ? fromVC : toVC
         
         if(presenting) {
@@ -71,7 +71,12 @@ class TransitionFactory {
         
         animatingView.frame = initialFrame
         
-        UIView.animateWithDuration(duration, animations: { 
+//        animatingView.frame = finalFrame
+//        if !presenting {
+//            fromView.removeFromSuperview()
+//        }
+//        context.completeTransition(true)
+        UIView.animateWithDuration(duration, animations: {
             animatingView.frame = finalFrame
         }) { (value: Bool) in
             if !presenting {

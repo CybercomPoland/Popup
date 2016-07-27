@@ -10,7 +10,9 @@ import UIKit
 
 class GenericPopupViewController: UIViewController {
     
-    private var upperView = UIView()
+    private var container = UIView()
+    private var upperView = UIScrollView()
+    private var upperContainerView = UIView()
     private var lowerView = UIView()
     private var actions: [PopupAction]!
     
@@ -18,6 +20,7 @@ class GenericPopupViewController: UIViewController {
         self.init()
         setupBasicView()
         self.actions = actions
+        upperContainerView.translatesAutoresizingMaskIntoConstraints = false
         
         let titleLabel = UILabel(frame: CGRectZero)
         titleLabel.text = title
@@ -31,8 +34,11 @@ class GenericPopupViewController: UIViewController {
         subtitleLabel.numberOfLines = 0
         subtitleLabel.textAlignment = .Center
         
-        upperView.addSubview(titleLabel, underView: nil, isLastOne: false)
-        upperView.addSubview(subtitleLabel, underView: titleLabel, isLastOne: true)
+        upperContainerView.addSubview(titleLabel, underView: nil, isLastOne: false)
+        upperContainerView.addSubview(subtitleLabel, underView: titleLabel, isLastOne: true)
+        
+        upperView.addSubviewAndFill(upperContainerView)
+        upperView.addConstraint(NSLayoutConstraint(item: upperContainerView, attribute: .Width, relatedBy: .Equal, toItem: upperView, attribute: .Width, multiplier: 1, constant: 0))
         
         var previousButton: UIButton? = nil
         for (index, action) in actions.enumerate() {
@@ -47,7 +53,11 @@ class GenericPopupViewController: UIViewController {
             lowerView.addSubview(button, underView: previousButton, isLastOne: isLastOne)
             previousButton = button
         }
+        
+        let newSize = view.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        view.bounds.size = newSize
 
+        view.layoutIfNeeded()
     }
     
     convenience init(headerView: UIView, actions: [PopupAction]) {
@@ -56,22 +66,24 @@ class GenericPopupViewController: UIViewController {
     }
     
     private func setupBasicView() {
-        let width = UIScreen.mainScreen().bounds.width * 0.9
-
-        view.addSubview(upperView, underView: nil, isLastOne: false)
-        view.addSubview(lowerView, underView: upperView, isLastOne: true)
+        let width: CGFloat = (UIScreen.mainScreen().bounds.width * 0.9)
+        let height: CGFloat = (UIScreen.mainScreen().bounds.height * 0.9)
+        
+        container.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubviewAndFill(container)
+       
+        container.addSubview(upperView, underView: nil, isLastOne: false)
+        container.addSubview(lowerView, underView: upperView, isLastOne: true)
         
         upperView.translatesAutoresizingMaskIntoConstraints = false
         lowerView.translatesAutoresizingMaskIntoConstraints = false
+       
+        let heightConstraint = NSLayoutConstraint(item: upperView, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: height)
+        upperView.addConstraint(heightConstraint)
+        
+        container.addConstraint(NSLayoutConstraint(item: container, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: width))
+        container.addConstraint(NSLayoutConstraint(item: container, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: height))
 
-        ///
-        //upperView.addConstraint(NSLayoutConstraint(item: upperView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100.0))
-        //lowerView.addConstraint(NSLayoutConstraint(item: lowerView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 100.0))
-        ///
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.addConstraint(NSLayoutConstraint(item: view, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: width))
-        
         upperView.backgroundColor = UIColor.redColor()
         lowerView.backgroundColor = UIColor.blueColor()
         view.backgroundColor = UIColor.brownColor()
