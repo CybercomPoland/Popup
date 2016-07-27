@@ -19,7 +19,6 @@
 		1B47D5A91D477CF500FC3EA8 /* GenericPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47D5A81D477CF500FC3EA8 /* GenericPopupViewController.swift */; };
 		1B47D5AB1D477D9500FC3EA8 /* PopupAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47D5AA1D477D9500FC3EA8 /* PopupAction.swift */; };
 		1B47D5AD1D47817E00FC3EA8 /* UIView+AddSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47D5AC1D47817E00FC3EA8 /* UIView+AddSubview.swift */; };
-		1B47D5AF1D48B74000FC3EA8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1B47D5AE1D48B74000FC3EA8 /* .gitignore */; };
 		26449FA48340E9B5A593DC72 /* Pods_Popup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935C8DFAF70751BD2FBB0AD4 /* Pods_Popup.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		1B47D5A81D477CF500FC3EA8 /* GenericPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericPopupViewController.swift; sourceTree = "<group>"; };
 		1B47D5AA1D477D9500FC3EA8 /* PopupAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupAction.swift; sourceTree = "<group>"; };
 		1B47D5AC1D47817E00FC3EA8 /* UIView+AddSubview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubview.swift"; sourceTree = "<group>"; };
-		1B47D5AE1D48B74000FC3EA8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		935C8DFAF70751BD2FBB0AD4 /* Pods_Popup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Popup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DD30B7764936B4E86D6AC9 /* Pods-Popup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Popup/Pods-Popup.debug.xcconfig"; sourceTree = "<group>"; };
 		DC78D42AF217B671D3806D7C /* Pods-Popup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Popup/Pods-Popup.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 		1B47D5821D46163500FC3EA8 = {
 			isa = PBXGroup;
 			children = (
-				1B47D5AE1D48B74000FC3EA8 /* .gitignore */,
 				1B47D58D1D46163500FC3EA8 /* Popup */,
 				1B47D58C1D46163500FC3EA8 /* Products */,
 				C4677DED62DDA86AAD086AF7 /* Pods */,
@@ -173,7 +170,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B47D5AF1D48B74000FC3EA8 /* .gitignore in Resources */,
 				1B47D5991D46163500FC3EA8 /* LaunchScreen.storyboard in Resources */,
 				1B47D5961D46163500FC3EA8 /* Assets.xcassets in Resources */,
 				1B47D5941D46163500FC3EA8 /* Main.storyboard in Resources */,
