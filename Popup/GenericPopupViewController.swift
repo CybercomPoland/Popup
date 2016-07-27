@@ -10,17 +10,17 @@ import UIKit
 
 class GenericPopupViewController: UIViewController {
     
-    private var container = UIView()
-    private var upperView = UIScrollView()
-    private var upperContainerView = UIView()
-    private var lowerView = UIView()
+    private var mainContainer = UIView()
+    private var scrollView = UIScrollView()
+    private var scrollViewContentContainer = UIView()
+    private var buttonsContainer = UIView()
     private var actions: [PopupAction]!
     
     convenience init(title: String, subtitle: String, actions: [PopupAction]) {
         self.init()
         setupBasicView()
         self.actions = actions
-        upperContainerView.translatesAutoresizingMaskIntoConstraints = false
+        scrollViewContentContainer.translatesAutoresizingMaskIntoConstraints = false
         
         let titleLabel = UILabel(frame: CGRectZero)
         titleLabel.text = title
@@ -34,15 +34,15 @@ class GenericPopupViewController: UIViewController {
         subtitleLabel.numberOfLines = 0
         subtitleLabel.textAlignment = .Center
         
-        upperContainerView.addSubview(titleLabel, underView: nil, isLastOne: false)
-        upperContainerView.addSubview(subtitleLabel, underView: titleLabel, isLastOne: true)
+        scrollViewContentContainer.addSubview(titleLabel, underView: nil, isLastOne: false)
+        scrollViewContentContainer.addSubview(subtitleLabel, underView: titleLabel, isLastOne: true)
         
-        upperView.addSubviewAndFill(upperContainerView)
-        upperView.addConstraint(NSLayoutConstraint(item: upperContainerView, attribute: .Width, relatedBy: .Equal, toItem: upperView, attribute: .Width, multiplier: 1, constant: 0))
+        scrollView.addSubviewAndFill(scrollViewContentContainer)
+        scrollView.addConstraint(NSLayoutConstraint(item: scrollViewContentContainer, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1, constant: 0))
         
-        let size = upperContainerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
-        let heightConstraint = NSLayoutConstraint(item: upperView, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height)
-        upperView.addConstraint(heightConstraint)
+        let size = scrollViewContentContainer.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        let heightConstraint = NSLayoutConstraint(item: scrollView, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height)
+        scrollView.addConstraint(heightConstraint)
 
         var previousButton: UIButton? = nil
         for (index, action) in actions.enumerate() {
@@ -54,7 +54,7 @@ class GenericPopupViewController: UIViewController {
             button.setTitle(action.title, forState: .Normal)
             
             let isLastOne = index == (actions.count - 1)
-            lowerView.addSubview(button, underView: previousButton, isLastOne: isLastOne)
+            buttonsContainer.addSubview(button, underView: previousButton, isLastOne: isLastOne)
             previousButton = button
         }
         
@@ -73,20 +73,20 @@ class GenericPopupViewController: UIViewController {
         let width: CGFloat = (UIScreen.mainScreen().bounds.width * 0.9)
         let height: CGFloat = (UIScreen.mainScreen().bounds.height * 0.9)
         
-        container.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubviewAndFill(container)
+        mainContainer.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubviewAndFill(mainContainer)
        
-        container.addSubview(upperView, underView: nil, isLastOne: false)
-        container.addSubview(lowerView, underView: upperView, isLastOne: true)
+        mainContainer.addSubview(scrollView, underView: nil, isLastOne: false)
+        mainContainer.addSubview(buttonsContainer, underView: scrollView, isLastOne: true)
         
-        upperView.translatesAutoresizingMaskIntoConstraints = false
-        lowerView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        buttonsContainer.translatesAutoresizingMaskIntoConstraints = false
         
-        container.addConstraint(NSLayoutConstraint(item: container, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: width))
-        container.addConstraint(NSLayoutConstraint(item: container, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: height))
+        mainContainer.addConstraint(NSLayoutConstraint(item: mainContainer, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: width))
+        mainContainer.addConstraint(NSLayoutConstraint(item: mainContainer, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: height))
 
-        upperView.backgroundColor = UIColor.redColor()
-        lowerView.backgroundColor = UIColor.blueColor()
+        scrollView.backgroundColor = UIColor.redColor()
+        buttonsContainer.backgroundColor = UIColor.blueColor()
         view.backgroundColor = UIColor.brownColor()
     }
     
