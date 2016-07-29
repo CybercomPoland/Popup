@@ -63,7 +63,8 @@ class ViewController: UIViewController {
         
     }
     @IBAction func showWithHeaderView(sender: UIButton) {
-        let headerView = storyboard!.instantiateViewControllerWithIdentifier("Popup").view
+        //let headerView = storyboard!.instantiateViewControllerWithIdentifier("Popup").view
+        let headerView = NSBundle.mainBundle().loadNibNamed("exampleview", owner: self, options: nil).first as! UIView
         let controller = GenericPopupViewController(headerView: headerView, actions: [
             PopupAction(title: "Tap on me", color: UIColor.redColor(), action: {
                 print("done first action")

@@ -69,13 +69,19 @@ class GenericPopupViewController: UIViewController {
         setupBasicView()
         self.actions = actions
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.setNeedsLayout()
-        headerView.layoutIfNeeded()
-        headerView.bounds.size = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+//        headerView.setNeedsLayout()
+//        headerView.layoutIfNeeded()
+//        headerView.bounds.size = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        let headerViewSize = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
         
+//        headerView.addConstraint(NSLayoutConstraint(item: headerView, attribute: .Width, relatedBy: .GreaterThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: headerViewSize.width))
+//        headerView.addConstraint(NSLayoutConstraint(item: headerView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: headerViewSize.height))
+        
+        scrollViewContentContainer.translatesAutoresizingMaskIntoConstraints = false
         scrollViewContentContainer.addSubviewAndFill(headerView)
         scrollView.addSubviewAndFill(scrollViewContentContainer)
         scrollView.addConstraint(NSLayoutConstraint(item: scrollViewContentContainer, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1, constant: 0))
+      
         let size = scrollViewContentContainer.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
         let heightConstraint = NSLayoutConstraint(item: scrollView, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height)
         scrollView.addConstraint(heightConstraint)
@@ -98,6 +104,12 @@ class GenericPopupViewController: UIViewController {
         view.bounds.size = newSize
         
         view.layoutIfNeeded()
+        print("K")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     private func setupBasicView() {
