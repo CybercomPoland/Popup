@@ -10,16 +10,20 @@ import UIKit
 
 extension UIView {
     func addSubview(subview: UIView, underView: UIView?, isLastOne: Bool) {
+       self.addSubview(subview, underView: underView, isLastOne: isLastOne, leftMargin: 8, rightMargin: 8, upperMargin: 8, bottomMargin: 8)
+    }
+    
+    func addSubview(subview: UIView, underView: UIView?, isLastOne: Bool, leftMargin: CGFloat, rightMargin: CGFloat, upperMargin: CGFloat, bottomMargin: CGFloat?) {
         addSubview(subview)
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(margin)-[subview]-(margin)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["margin": 8], views: ["subview" : subview]))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(leftMargin)-[subview]-(rightMargin)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["leftMargin": leftMargin, "rightMargin": rightMargin], views: ["subview" : subview]))
         if let underView = underView {
-            addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[underView]-(margin)-[subview]", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["margin": 8], views: ["underView": underView, "subview": subview]))
+            addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:[underView]-(upperMargin)-[subview]", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["upperMargin": upperMargin], views: ["underView": underView, "subview": subview]))
         } else {
-            addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(margin)-[subview]", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["margin": 8], views: ["subview": subview]))
+            addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(upperMargin)-[subview]", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["upperMargin": upperMargin], views: ["subview": subview]))
         }
         
         if(isLastOne) {
-            addConstraint(NSLayoutConstraint(item: self, attribute: .Bottom, relatedBy: .Equal, toItem: subview, attribute: .Bottom, multiplier: 1.0, constant: 8.0))
+            addConstraint(NSLayoutConstraint(item: self, attribute: .Bottom, relatedBy: .Equal, toItem: subview, attribute: .Bottom, multiplier: 1.0, constant: bottomMargin ?? 8))
         }
     }
     

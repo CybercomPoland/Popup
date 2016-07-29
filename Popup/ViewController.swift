@@ -29,7 +29,9 @@ class ViewController: UIViewController {
         let controller = GenericPopupViewController(title: "The value provided by the presentation controller’s delegate or UIModalPresentationNone if a delegate was not provided or does not return a valid value. ", subtitle: "After the content managed by the presentation controller is onscreen, this method returns the presentation style to use when transitioning to a horizontally compact environment. This method is not meant to be overridden. The implementation consults its delegate object and returns the value provided by that object’s adaptivePresentationStyleForPresentationController: method. Some system-supplied presentation controllers may also provide a new style that is more suited for a compact environment. For example, presentation controllers that manage popovers and form sheets return the UIModalPresentationFullScreen value.", actions:
             [
                 PopupAction(title: "Tap on me", color: UIColor.redColor(), action: {
-                print("done first action")
+                    self.dismissViewControllerAnimated(true, completion: {
+                        print("done first action")
+                    })
                 }),
                 PopupAction(title: "Tap on me too", color: UIColor.greenColor(), action: {
                     print("done second action")
@@ -38,7 +40,6 @@ class ViewController: UIViewController {
         //let controller = GenericPopupViewController(title: "", subtitle: "", actions: [])
 
         controller.transitioningDelegate = transitionHandler
-        controller.modalPresentationStyle = UIModalPresentationStyle.Custom
         presentViewController(controller, animated: true, completion: nil)
 //        customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
         
@@ -57,7 +58,6 @@ class ViewController: UIViewController {
         //let controller = GenericPopupViewController(title: "", subtitle: "", actions: [])
         
         controller.transitioningDelegate = transitionHandler
-        controller.modalPresentationStyle = UIModalPresentationStyle.Custom
         presentViewController(controller, animated: true, completion: nil)
         //        customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
         
@@ -75,7 +75,6 @@ class ViewController: UIViewController {
             ]
         )
         controller.transitioningDelegate = transitionHandler
-        controller.modalPresentationStyle = .Custom
         presentViewController(controller, animated: true, completion: nil)
     }
 }

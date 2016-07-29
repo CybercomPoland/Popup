@@ -16,12 +16,15 @@ class GenericPopupViewController: UIViewController {
     private var buttonsContainer = UIView()
     private var actions: [PopupAction]!
     
+    private let maxWidth: CGFloat = (UIScreen.mainScreen().bounds.width * 0.9)
+    private let maxHeight: CGFloat = (UIScreen.mainScreen().bounds.height * 0.9)
+    private let cornerRadius: CGFloat = 5.0
+    private let mainBackgroundColor = UIColor.whiteColor()
+    
     convenience init(title: String, subtitle: String, actions: [PopupAction]) {
         self.init()
         setupBasicView()
-        self.actions = actions
-        scrollViewContentContainer.translatesAutoresizingMaskIntoConstraints = false
-        
+
         let titleLabel = UILabel(frame: CGRectZero)
         titleLabel.text = title
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -36,52 +39,26 @@ class GenericPopupViewController: UIViewController {
         
         scrollViewContentContainer.addSubview(titleLabel, underView: nil, isLastOne: false)
         scrollViewContentContainer.addSubview(subtitleLabel, underView: titleLabel, isLastOne: true)
-        
-        scrollView.addSubviewAndFill(scrollViewContentContainer)
-        scrollView.addConstraint(NSLayoutConstraint(item: scrollViewContentContainer, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1, constant: 0))
-        
-        let size = scrollViewContentContainer.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
-        let heightConstraint = NSLayoutConstraint(item: scrollView, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height)
-        scrollView.addConstraint(heightConstraint)
 
-        var previousButton: UIButton? = nil
-        for (index, action) in actions.enumerate() {
-            let button = UIButton(type: .System)
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.backgroundColor = action.color
-            button.tag = index
-            button.addTarget(self, action: #selector(handleButtonTapped(_:)), forControlEvents: .TouchUpInside)
-            button.setTitle(action.title, forState: .Normal)
-            
-            let isLastOne = index == (actions.count - 1)
-            buttonsContainer.addSubview(button, underView: previousButton, isLastOne: isLastOne)
-            previousButton = button
-        }
-        
-        let newSize = view.systemLayoutSizeFittingSize(UILayoutFittingExpandedSize)
-        view.bounds.size = newSize
-
-        view.layoutIfNeeded()
+        scrollViewAndButtonsSetup(actions)
     }
     
     convenience init(headerView: UIView, actions: [PopupAction]) {
         self.init()
         setupBasicView()
-        self.actions = actions
         headerView.translatesAutoresizingMaskIntoConstraints = false
-//        headerView.setNeedsLayout()
-//        headerView.layoutIfNeeded()
-//        headerView.bounds.size = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
-        let headerViewSize = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
         
-//        headerView.addConstraint(NSLayoutConstraint(item: headerView, attribute: .Width, relatedBy: .GreaterThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: headerViewSize.width))
-//        headerView.addConstraint(NSLayoutConstraint(item: headerView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: headerViewSize.height))
-        
-        scrollViewContentContainer.translatesAutoresizingMaskIntoConstraints = false
         scrollViewContentContainer.addSubviewAndFill(headerView)
+        
+        scrollViewAndButtonsSetup(actions)
+    }
+    
+    private func scrollViewAndButtonsSetup(actions: [PopupAction]) {
+        self.actions = actions
+        
         scrollView.addSubviewAndFill(scrollViewContentContainer)
         scrollView.addConstraint(NSLayoutConstraint(item: scrollViewContentContainer, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1, constant: 0))
-      
+        
         let size = scrollViewContentContainer.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
         let heightConstraint = NSLayoutConstraint(item: scrollView, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: size.height)
         scrollView.addConstraint(heightConstraint)
@@ -99,38 +76,37 @@ class GenericPopupViewController: UIViewController {
             buttonsContainer.addSubview(button, underView: previousButton, isLastOne: isLastOne)
             previousButton = button
         }
-
+        
         let newSize = view.systemLayoutSizeFittingSize(UILayoutFittingExpandedSize)
         view.bounds.size = newSize
-        
         view.layoutIfNeeded()
-        print("K")
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
     }
     
     private func setupBasicView() {
-        let width: CGFloat = (UIScreen.mainScreen().bounds.width * 0.9)
-        let height: CGFloat = (UIScreen.mainScreen().bounds.height * 0.9)
-        
+        self.modalPresentationStyle = .Custom
+
         mainContainer.translatesAutoresizingMaskIntoConstraints = false
+        mainContainer.layer.cornerRadius = cornerRadius
+        mainContainer.clipsToBounds = true
+        view.layer.cornerRadius = cornerRadius
+        view.clipsToBounds = true
+        scrollViewContentContainer.layer.cornerRadius = cornerRadius
+        scrollViewContentContainer.clipsToBounds = true
+        
+        scrollViewContentContainer.translatesAutoresizingMaskIntoConstraints = false
+
         view.addSubviewAndFill(mainContainer)
        
-        mainContainer.addSubview(scrollView, underView: nil, isLastOne: false)
-        mainContainer.addSubview(buttonsContainer, underView: scrollView, isLastOne: true)
+        mainContainer.addSubview(scrollView, underView: nil, isLastOne: false, leftMargin: 0, rightMargin: 0, upperMargin: 0, bottomMargin: nil)
+        mainContainer.addSubview(buttonsContainer, underView: scrollView, isLastOne: true, leftMargin: 0, rightMargin: 0, upperMargin: 0, bottomMargin: 0)
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         buttonsContainer.translatesAutoresizingMaskIntoConstraints = false
         
-        mainContainer.addConstraint(NSLayoutConstraint(item: mainContainer, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: width))
-        mainContainer.addConstraint(NSLayoutConstraint(item: mainContainer, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: height))
+        mainContainer.addConstraint(NSLayoutConstraint(item: mainContainer, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: maxWidth))
+        mainContainer.addConstraint(NSLayoutConstraint(item: mainContainer, attribute: .Height, relatedBy: .LessThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: maxHeight))
 
-        scrollView.backgroundColor = UIColor.redColor()
-        buttonsContainer.backgroundColor = UIColor.blueColor()
-        view.backgroundColor = UIColor.brownColor()
+        view.backgroundColor = mainBackgroundColor
     }
     
     func handleButtonTapped(button: UIButton) {
