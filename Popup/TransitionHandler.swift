@@ -17,14 +17,15 @@ class TransitionHandler: NSObject, UIViewControllerAnimatedTransitioning, UIView
     private var presenting = false
     private var transitionAnimation: ((context: UIViewControllerContextTransitioning, presenting: Bool, duration: NSTimeInterval) -> Void)
     
-    override init() {
-        transitionAnimation = {(context: UIViewControllerContextTransitioning, Bool, NSTimeInterval) in }
+    convenience override init() {
+        let transitionAnimation = TransitionFactory().getTransitionAnimation(.SlideFromBottom)
+        self.init(transitionAnimation: transitionAnimation, withDuration: 0.33)
     }
     
-    convenience init(transitionAnimation: ((transitionContext: UIViewControllerContextTransitioning, presenting: Bool, duration: NSTimeInterval) -> Void), withDuration duration: NSTimeInterval) {
-        self.init()
+    init(transitionAnimation: ((transitionContext: UIViewControllerContextTransitioning, presenting: Bool, duration: NSTimeInterval) -> Void), withDuration duration: NSTimeInterval) {
         self.transitionAnimation = transitionAnimation
         self.transitionDuration = duration
+        super.init()
     }
     
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {

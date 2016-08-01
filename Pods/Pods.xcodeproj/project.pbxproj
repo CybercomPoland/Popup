@@ -7,123 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08C83F2351048EC783218769B6A65467 /* Alert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602AB66FE1A3936691B592B36D6EB67E /* Alert.xib */; };
-		0AB771CDF0BE39E108799904750ADD2A /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD06E25DB5A746E609C9F4D74E7A270D /* Montserrat-Regular.ttf */; };
-		0EC0CB8B60C19C01BBC93C3B252C630D /* Presentr.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7284B35126EAA0809B691E560B0B125 /* Presentr.swift */; };
-		17AB95221D639E4B579F70ACB55B6391 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF3F2BBF35392B68F5EDCC3073AE250 /* SourceSansPro-Regular.ttf */; };
-		1DE1D837D7E8DE59779FC20226DA80F9 /* Pods-Popup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08E2BC0CD4FDF9B18E0C10AD10D23407 /* Pods-Popup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44F7E2602503E03CBAE70B59D2D86050 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		4D6EE12CA7C71CEBFD1B4F949555BA40 /* CoverHorizontalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB425712749860644D9B30086D82F6E9 /* CoverHorizontalAnimation.swift */; };
-		5ACE96846B1FC6B18221F89F33485CA6 /* PresentrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888C645087360909F5AAC4B4CF0C2DA /* PresentrController.swift */; };
-		5E27ECBE6C590E58BF4CDFAD8D076829 /* Presentr+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4961F928829E7EF948F2451F6BC92 /* Presentr+Equatable.swift */; };
-		657F49AF2460F8EBE729026A816C0EFA /* PresentrAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A356C9619F7B3A0BFD927FBA03B109 /* PresentrAnimation.swift */; };
-		77D5E034E9F27BBE6A61A139FD0163F7 /* Presentr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB274FD702DDE9A32A3CBF3FEFC7AA9 /* Presentr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		861FBA4FEE756E030982013B3CC6E0ED /* Presentr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5F1181A407FF2C3B2CF9CFE3C4CB75 /* Presentr-dummy.m */; };
-		86A4853F9DE429BB6D9BB5BE831C5B7B /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E5FB8736486A60E191280C8102C784 /* TransitionType.swift */; };
-		9F230D297345F08DC40842EEEABF471B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		AF9296DE690D92170363B33C0F979E13 /* CoverVerticalFromTopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D5B643526945C4117D7C6351071331 /* CoverVerticalFromTopAnimation.swift */; };
-		C61BAA5E15A830AD0A5D0F36C1AAE292 /* ModalSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F306E97F31DD5A3F4C32DA4D55E1CF /* ModalSize.swift */; };
-		C98EC9B4BAE54CEF8F1F4256CBFBED2B /* ModalCenterPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB1F648EC03B8B93A9E069184604C71 /* ModalCenterPosition.swift */; };
-		D660C91F7451C618894C82E5AFBD119D /* Pods-Popup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EC773BD8D3E8118DDBDE3AC3580702 /* Pods-Popup-dummy.m */; };
-		EBB621A6FE5DEFED0C75D8F68F3FD772 /* PresentationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671F28A0A136E15D15529ADB6AF6FECE /* PresentationType.swift */; };
-		FCABFC8E10DE01B03120113412BFC556 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7358F9FF297E6287C7126F03B6DA48A /* AlertViewController.swift */; };
+		407B4E3EE680E79914109148FFF125C9 /* Pods-Popup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08E2BC0CD4FDF9B18E0C10AD10D23407 /* Pods-Popup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CC99F5DA8EB13B351A0D1E4E14D98F3 /* Pods-Popup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EC773BD8D3E8118DDBDE3AC3580702 /* Pods-Popup-dummy.m */; };
+		EDE99D0D73132D3A77E94A360D492C42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8AC8D9F8AF6CE147CA3B8C268CBDA52C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 186F6861CADD1A7DB2E0A2B408BF099F;
-			remoteInfo = Presentr;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		08E2BC0CD4FDF9B18E0C10AD10D23407 /* Pods-Popup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Popup-umbrella.h"; sourceTree = "<group>"; };
-		1888C645087360909F5AAC4B4CF0C2DA /* PresentrController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentrController.swift; path = Presentr/PresentrController.swift; sourceTree = "<group>"; };
-		1BCA35308060480ED61E5F625A330097 /* Presentr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Presentr.modulemap; sourceTree = "<group>"; };
-		1EB1F648EC03B8B93A9E069184604C71 /* ModalCenterPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModalCenterPosition.swift; path = Presentr/ModalCenterPosition.swift; sourceTree = "<group>"; };
-		2FB274FD702DDE9A32A3CBF3FEFC7AA9 /* Presentr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presentr-umbrella.h"; sourceTree = "<group>"; };
-		351F733596FA0C2EBAAFE67DA4CA2EFB /* Pods_Popup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Popup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		45A356C9619F7B3A0BFD927FBA03B109 /* PresentrAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentrAnimation.swift; path = Presentr/PresentrAnimation.swift; sourceTree = "<group>"; };
-		602AB66FE1A3936691B592B36D6EB67E /* Alert.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = Alert.xib; path = Presentr/Alert.xib; sourceTree = "<group>"; };
-		671F28A0A136E15D15529ADB6AF6FECE /* PresentationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationType.swift; path = Presentr/PresentationType.swift; sourceTree = "<group>"; };
 		7BB76960CFCC0C74ECA273DEDB4679F7 /* Pods-Popup-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Popup-acknowledgements.plist"; sourceTree = "<group>"; };
-		7DF3F2BBF35392B68F5EDCC3073AE250 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "SourceSansPro-Regular.ttf"; path = "Presentr/SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
-		81D5B643526945C4117D7C6351071331 /* CoverVerticalFromTopAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoverVerticalFromTopAnimation.swift; path = Presentr/CoverVerticalFromTopAnimation.swift; sourceTree = "<group>"; };
-		8720CBACF6C8C9CA6F140A42350B4B52 /* Presentr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93FD3526A6EC1BF9E11D5B5C69473D22 /* Pods-Popup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Popup.debug.xcconfig"; sourceTree = "<group>"; };
 		95EFEFAC66CCB3977EB4E930BB8F0213 /* Pods-Popup-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Popup-frameworks.sh"; sourceTree = "<group>"; };
-		A274241193C98EC138DC1E08A8CFB882 /* Presentr-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presentr-prefix.pch"; sourceTree = "<group>"; };
-		A4B9D83E19772376E78DAB2E39B8B87D /* Presentr.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Presentr.xcconfig; sourceTree = "<group>"; };
-		AD06E25DB5A746E609C9F4D74E7A270D /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "Presentr/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		B23B9B310F4149AD84C77596EA52D549 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2F306E97F31DD5A3F4C32DA4D55E1CF /* ModalSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModalSize.swift; path = Presentr/ModalSize.swift; sourceTree = "<group>"; };
 		C7EC773BD8D3E8118DDBDE3AC3580702 /* Pods-Popup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Popup-dummy.m"; sourceTree = "<group>"; };
-		C9E5FB8736486A60E191280C8102C784 /* TransitionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionType.swift; path = Presentr/TransitionType.swift; sourceTree = "<group>"; };
 		CA165085FBF9A5DDA6363E733ABEC04C /* Pods-Popup-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Popup-resources.sh"; sourceTree = "<group>"; };
-		CE5F1181A407FF2C3B2CF9CFE3C4CB75 /* Presentr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Presentr-dummy.m"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DB425712749860644D9B30086D82F6E9 /* CoverHorizontalAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoverHorizontalAnimation.swift; path = Presentr/CoverHorizontalAnimation.swift; sourceTree = "<group>"; };
+		D77BCAA27D592D110EE70B0B14904F98 /* Pods_Popup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Popup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD8D79143A9FA67C9A3C843705131C5 /* Pods-Popup-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Popup-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E7284B35126EAA0809B691E560B0B125 /* Presentr.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Presentr.swift; path = Presentr/Presentr.swift; sourceTree = "<group>"; };
-		E7358F9FF297E6287C7126F03B6DA48A /* AlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertViewController.swift; path = Presentr/AlertViewController.swift; sourceTree = "<group>"; };
 		ED39CA3EA4AE1111CC1508133B982B4D /* Pods-Popup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Popup.release.xcconfig"; sourceTree = "<group>"; };
 		FB3023B3224AE385EE73B233AB58FB8C /* Pods-Popup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Popup.modulemap"; sourceTree = "<group>"; };
-		FEFE1BAFC151D543F90E03E6A5E35D04 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFB4961F928829E7EF948F2451F6BC92 /* Presentr+Equatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Presentr+Equatable.swift"; path = "Presentr/Presentr+Equatable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0BD854C27DD635BD6E2E42862A2A17F4 /* Frameworks */ = {
+		FD0B94AB3891F0EF01EFCB489962E7A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F230D297345F08DC40842EEEABF471B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55219A139C521783F55A3C2697DFFFC7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				44F7E2602503E03CBAE70B59D2D86050 /* Foundation.framework in Frameworks */,
+				EDE99D0D73132D3A77E94A360D492C42 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27F163E1E5591D16360F71AC15DBF6AF /* Resources */ = {
+		2A7621E3B4ABA49D4F397C70C31FB357 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				602AB66FE1A3936691B592B36D6EB67E /* Alert.xib */,
-				AD06E25DB5A746E609C9F4D74E7A270D /* Montserrat-Regular.ttf */,
-				7DF3F2BBF35392B68F5EDCC3073AE250 /* SourceSansPro-Regular.ttf */,
+				D77BCAA27D592D110EE70B0B14904F98 /* Pods_Popup.framework */,
 			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		380177DAEF4CCD336E434081813577A4 /* Presentr */ = {
-			isa = PBXGroup;
-			children = (
-				E7358F9FF297E6287C7126F03B6DA48A /* AlertViewController.swift */,
-				DB425712749860644D9B30086D82F6E9 /* CoverHorizontalAnimation.swift */,
-				81D5B643526945C4117D7C6351071331 /* CoverVerticalFromTopAnimation.swift */,
-				1EB1F648EC03B8B93A9E069184604C71 /* ModalCenterPosition.swift */,
-				C2F306E97F31DD5A3F4C32DA4D55E1CF /* ModalSize.swift */,
-				671F28A0A136E15D15529ADB6AF6FECE /* PresentationType.swift */,
-				E7284B35126EAA0809B691E560B0B125 /* Presentr.swift */,
-				FFB4961F928829E7EF948F2451F6BC92 /* Presentr+Equatable.swift */,
-				45A356C9619F7B3A0BFD927FBA03B109 /* PresentrAnimation.swift */,
-				1888C645087360909F5AAC4B4CF0C2DA /* PresentrController.swift */,
-				C9E5FB8736486A60E191280C8102C784 /* TransitionType.swift */,
-				27F163E1E5591D16360F71AC15DBF6AF /* Resources */,
-				7ABFEE7CB2B5E7582895C221BEC287AB /* Support Files */,
-			);
-			path = Presentr;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -142,36 +64,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7541E81BB50CA1853BBCC64538E0EC37 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				351F733596FA0C2EBAAFE67DA4CA2EFB /* Pods_Popup.framework */,
-				8720CBACF6C8C9CA6F140A42350B4B52 /* Presentr.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7ABFEE7CB2B5E7582895C221BEC287AB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FEFE1BAFC151D543F90E03E6A5E35D04 /* Info.plist */,
-				1BCA35308060480ED61E5F625A330097 /* Presentr.modulemap */,
-				A4B9D83E19772376E78DAB2E39B8B87D /* Presentr.xcconfig */,
-				CE5F1181A407FF2C3B2CF9CFE3C4CB75 /* Presentr-dummy.m */,
-				A274241193C98EC138DC1E08A8CFB882 /* Presentr-prefix.pch */,
-				2FB274FD702DDE9A32A3CBF3FEFC7AA9 /* Presentr-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Presentr";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				C7E8171D93B76060782A0FDD4F54EF31 /* Pods */,
-				7541E81BB50CA1853BBCC64538E0EC37 /* Products */,
+				2A7621E3B4ABA49D4F397C70C31FB357 /* Products */,
 				52CF66DAD695FC746856054482D98706 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -182,14 +80,6 @@
 				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C7E8171D93B76060782A0FDD4F54EF31 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				380177DAEF4CCD336E434081813577A4 /* Presentr */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		EF6B1238477B2F489125B528F9E05139 /* Pods-Popup */ = {
@@ -213,59 +103,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BA43EB4BD4F803AA9AD0591C48C8420E /* Headers */ = {
+		18046BFE8C08F351DB30B3F26C0D54C7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DE1D837D7E8DE59779FC20226DA80F9 /* Pods-Popup-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C6748DAB3CA4E210928F839E5FEA80B9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				77D5E034E9F27BBE6A61A139FD0163F7 /* Presentr-umbrella.h in Headers */,
+				407B4E3EE680E79914109148FFF125C9 /* Pods-Popup-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		186F6861CADD1A7DB2E0A2B408BF099F /* Presentr */ = {
+		D71AB36A99F8B5271056E6747C311635 /* Pods-Popup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7A13D031684C322A6DC90F3C73FFDE2 /* Build configuration list for PBXNativeTarget "Presentr" */;
+			buildConfigurationList = BB53DB960941C5C25D738FF7F051C9C3 /* Build configuration list for PBXNativeTarget "Pods-Popup" */;
 			buildPhases = (
-				522421715C9AE73C597C5F09C472BC40 /* Sources */,
-				0BD854C27DD635BD6E2E42862A2A17F4 /* Frameworks */,
-				70835553240832D17BC5457DD04A212F /* Resources */,
-				C6748DAB3CA4E210928F839E5FEA80B9 /* Headers */,
+				5180FDCF8F7BC5D8A2BC633D22E84649 /* Sources */,
+				FD0B94AB3891F0EF01EFCB489962E7A6 /* Frameworks */,
+				18046BFE8C08F351DB30B3F26C0D54C7 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = Presentr;
-			productName = Presentr;
-			productReference = 8720CBACF6C8C9CA6F140A42350B4B52 /* Presentr.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		199DE7025816A1E52237F8BA3923DCB5 /* Pods-Popup */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7698A236B22843F3759BD729483D1AF5 /* Build configuration list for PBXNativeTarget "Pods-Popup" */;
-			buildPhases = (
-				3D21D8EF4969FCB3FB567D571CE83721 /* Sources */,
-				55219A139C521783F55A3C2697DFFFC7 /* Frameworks */,
-				BA43EB4BD4F803AA9AD0591C48C8420E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8298CA5719CFE489376B6AE8317C7EA2 /* PBXTargetDependency */,
 			);
 			name = "Pods-Popup";
 			productName = "Pods-Popup";
-			productReference = 351F733596FA0C2EBAAFE67DA4CA2EFB /* Pods_Popup.framework */;
+			productReference = D77BCAA27D592D110EE70B0B14904F98 /* Pods_Popup.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -285,99 +148,27 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7541E81BB50CA1853BBCC64538E0EC37 /* Products */;
+			productRefGroup = 2A7621E3B4ABA49D4F397C70C31FB357 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				199DE7025816A1E52237F8BA3923DCB5 /* Pods-Popup */,
-				186F6861CADD1A7DB2E0A2B408BF099F /* Presentr */,
+				D71AB36A99F8B5271056E6747C311635 /* Pods-Popup */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		70835553240832D17BC5457DD04A212F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08C83F2351048EC783218769B6A65467 /* Alert.xib in Resources */,
-				0AB771CDF0BE39E108799904750ADD2A /* Montserrat-Regular.ttf in Resources */,
-				17AB95221D639E4B579F70ACB55B6391 /* SourceSansPro-Regular.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		3D21D8EF4969FCB3FB567D571CE83721 /* Sources */ = {
+		5180FDCF8F7BC5D8A2BC633D22E84649 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D660C91F7451C618894C82E5AFBD119D /* Pods-Popup-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		522421715C9AE73C597C5F09C472BC40 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FCABFC8E10DE01B03120113412BFC556 /* AlertViewController.swift in Sources */,
-				4D6EE12CA7C71CEBFD1B4F949555BA40 /* CoverHorizontalAnimation.swift in Sources */,
-				AF9296DE690D92170363B33C0F979E13 /* CoverVerticalFromTopAnimation.swift in Sources */,
-				C98EC9B4BAE54CEF8F1F4256CBFBED2B /* ModalCenterPosition.swift in Sources */,
-				C61BAA5E15A830AD0A5D0F36C1AAE292 /* ModalSize.swift in Sources */,
-				EBB621A6FE5DEFED0C75D8F68F3FD772 /* PresentationType.swift in Sources */,
-				5E27ECBE6C590E58BF4CDFAD8D076829 /* Presentr+Equatable.swift in Sources */,
-				861FBA4FEE756E030982013B3CC6E0ED /* Presentr-dummy.m in Sources */,
-				0EC0CB8B60C19C01BBC93C3B252C630D /* Presentr.swift in Sources */,
-				657F49AF2460F8EBE729026A816C0EFA /* PresentrAnimation.swift in Sources */,
-				5ACE96846B1FC6B18221F89F33485CA6 /* PresentrController.swift in Sources */,
-				86A4853F9DE429BB6D9BB5BE831C5B7B /* TransitionType.swift in Sources */,
+				8CC99F5DA8EB13B351A0D1E4E14D98F3 /* Pods-Popup-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		8298CA5719CFE489376B6AE8317C7EA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Presentr;
-			target = 186F6861CADD1A7DB2E0A2B408BF099F /* Presentr */;
-			targetProxy = 8AC8D9F8AF6CE147CA3B8C268CBDA52C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		1D43D4AE1A627E883EAD4DFCB48E2CDE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4B9D83E19772376E78DAB2E39B8B87D /* Presentr.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Presentr/Presentr-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Presentr/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Presentr/Presentr.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Presentr;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -413,35 +204,6 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		41942D250ACDAC6C4F24891FA4FC183E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4B9D83E19772376E78DAB2E39B8B87D /* Presentr.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Presentr/Presentr-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Presentr/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Presentr/Presentr.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Presentr;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -487,7 +249,7 @@
 			};
 			name = Debug;
 		};
-		610103671609F294C7251A001DA56AE2 /* Release */ = {
+		8A077B95A43788EC06D70931D214B43E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED39CA3EA4AE1111CC1508133B982B4D /* Pods-Popup.release.xcconfig */;
 			buildSettings = {
@@ -520,7 +282,7 @@
 			};
 			name = Release;
 		};
-		86CC51A8B501C2A7F4BEC4E63557F13B /* Debug */ = {
+		EC7404C8F5E5742357CFC63C16CCD7A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93FD3526A6EC1BF9E11D5B5C69473D22 /* Pods-Popup.debug.xcconfig */;
 			buildSettings = {
@@ -547,7 +309,6 @@
 				PRODUCT_NAME = Pods_Popup;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -566,20 +327,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7698A236B22843F3759BD729483D1AF5 /* Build configuration list for PBXNativeTarget "Pods-Popup" */ = {
+		BB53DB960941C5C25D738FF7F051C9C3 /* Build configuration list for PBXNativeTarget "Pods-Popup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86CC51A8B501C2A7F4BEC4E63557F13B /* Debug */,
-				610103671609F294C7251A001DA56AE2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A7A13D031684C322A6DC90F3C73FFDE2 /* Build configuration list for PBXNativeTarget "Presentr" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D43D4AE1A627E883EAD4DFCB48E2CDE /* Debug */,
-				41942D250ACDAC6C4F24891FA4FC183E /* Release */,
+				EC7404C8F5E5742357CFC63C16CCD7A5 /* Debug */,
+				8A077B95A43788EC06D70931D214B43E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

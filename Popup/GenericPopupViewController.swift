@@ -15,6 +15,7 @@ class GenericPopupViewController: UIViewController {
     private var scrollViewContentContainer = UIView()
     private var buttonsContainer = UIView()
     private var actions: [PopupAction]!
+    private var popupConfigurator
     
     var dismissable: Bool! {
         didSet {
@@ -66,6 +67,18 @@ class GenericPopupViewController: UIViewController {
         
         scrollViewAndButtonsSetup(actions)
     }
+    
+//    convenience init(viewController: UIViewController, actions: [PopupAction], transitioningDelegate: UIViewControllerTransitioningDelegate, dismissable: Bool) {
+//        self.init()
+//        self.transitioningDelegate = transitioningDelegate
+//        self.dismissable = dismissable
+//        (self.transitioningDelegate as? TransitionHandler)?.popupShouldBeDismissable = dismissable
+//        
+//        setupBasicView()
+//        let container =
+//        
+//        scrollViewContentContainer.addSubviewAndFill(container)
+//    }
     
     private func scrollViewAndButtonsSetup(actions: [PopupAction]) {
         self.actions = actions

@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B3F2DEE1D4F78E600D22E13 /* PopupShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F2DED1D4F78E600D22E13 /* PopupShowable.swift */; };
+		1B3F2DF11D4F91C800D22E13 /* PopupConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F2DF01D4F91C800D22E13 /* PopupConfigurator.swift */; };
+		1B3F2DF31D4F976000D22E13 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F2DF21D4F976000D22E13 /* CustomButton.swift */; };
+		1B3F2DF51D4F9C3C00D22E13 /* PopupConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F2DF41D4F9C3C00D22E13 /* PopupConfigurationManager.swift */; };
 		1B47D58F1D46163500FC3EA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47D58E1D46163500FC3EA8 /* AppDelegate.swift */; };
 		1B47D5911D46163500FC3EA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47D5901D46163500FC3EA8 /* ViewController.swift */; };
 		1B47D5941D46163500FC3EA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B47D5921D46163500FC3EA8 /* Main.storyboard */; };
 		1B47D5961D46163500FC3EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B47D5951D46163500FC3EA8 /* Assets.xcassets */; };
 		1B47D5991D46163500FC3EA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B47D5971D46163500FC3EA8 /* LaunchScreen.storyboard */; };
-		1B47D5A11D46262C00FC3EA8 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47D5A01D46262C00FC3EA8 /* PopupViewController.swift */; };
 		1B47D5A31D463C3200FC3EA8 /* TransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47D5A21D463C3200FC3EA8 /* TransitionHandler.swift */; };
 		1B47D5A51D4647FE00FC3EA8 /* TransitionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47D5A41D4647FE00FC3EA8 /* TransitionFactory.swift */; };
 		1B47D5A71D47417E00FC3EA8 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47D5A61D47417E00FC3EA8 /* PresentationController.swift */; };
@@ -24,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B3F2DED1D4F78E600D22E13 /* PopupShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupShowable.swift; sourceTree = "<group>"; };
+		1B3F2DF01D4F91C800D22E13 /* PopupConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupConfigurator.swift; sourceTree = "<group>"; };
+		1B3F2DF21D4F976000D22E13 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		1B3F2DF41D4F9C3C00D22E13 /* PopupConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupConfigurationManager.swift; sourceTree = "<group>"; };
 		1B47D58B1D46163500FC3EA8 /* Popup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B47D58E1D46163500FC3EA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B47D5901D46163500FC3EA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,13 +38,12 @@
 		1B47D5951D46163500FC3EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B47D5981D46163500FC3EA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B47D59A1D46163500FC3EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B47D5A01D46262C00FC3EA8 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		1B47D5A21D463C3200FC3EA8 /* TransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionHandler.swift; sourceTree = "<group>"; };
 		1B47D5A41D4647FE00FC3EA8 /* TransitionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionFactory.swift; sourceTree = "<group>"; };
 		1B47D5A61D47417E00FC3EA8 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		1B47D5A81D477CF500FC3EA8 /* GenericPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericPopupViewController.swift; sourceTree = "<group>"; };
 		1B47D5AA1D477D9500FC3EA8 /* PopupAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupAction.swift; sourceTree = "<group>"; };
-		1B47D5AC1D47817E00FC3EA8 /* UIView+AddSubview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubview.swift"; sourceTree = "<group>"; };
+		1B47D5AC1D47817E00FC3EA8 /* UIView+AddSubview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+AddSubview.swift"; path = "Popup/UIView+AddSubview.swift"; sourceTree = "<group>"; };
 		1BB094901D4B7D4800890548 /* exampleview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = exampleview.xib; sourceTree = "<group>"; };
 		935C8DFAF70751BD2FBB0AD4 /* Pods_Popup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Popup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DD30B7764936B4E86D6AC9 /* Pods-Popup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Popup/Pods-Popup.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,9 +62,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B3F2DEC1D4F76FC00D22E13 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B47D5AC1D47817E00FC3EA8 /* UIView+AddSubview.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		1B3F2DEF1D4F908F00D22E13 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1B3F2DED1D4F78E600D22E13 /* PopupShowable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		1B47D5821D46163500FC3EA8 = {
 			isa = PBXGroup;
 			children = (
+				1B3F2DF41D4F9C3C00D22E13 /* PopupConfigurationManager.swift */,
+				1B3F2DEF1D4F908F00D22E13 /* Protocols */,
+				1B3F2DEC1D4F76FC00D22E13 /* Extensions */,
 				1B47D58D1D46163500FC3EA8 /* Popup */,
 				1B47D58C1D46163500FC3EA8 /* Products */,
 				C4677DED62DDA86AAD086AF7 /* Pods */,
@@ -83,14 +108,14 @@
 				1B47D5951D46163500FC3EA8 /* Assets.xcassets */,
 				1B47D5971D46163500FC3EA8 /* LaunchScreen.storyboard */,
 				1B47D59A1D46163500FC3EA8 /* Info.plist */,
-				1B47D5A01D46262C00FC3EA8 /* PopupViewController.swift */,
 				1B47D5A21D463C3200FC3EA8 /* TransitionHandler.swift */,
 				1B47D5A41D4647FE00FC3EA8 /* TransitionFactory.swift */,
 				1B47D5A61D47417E00FC3EA8 /* PresentationController.swift */,
 				1B47D5A81D477CF500FC3EA8 /* GenericPopupViewController.swift */,
 				1B47D5AA1D477D9500FC3EA8 /* PopupAction.swift */,
-				1B47D5AC1D47817E00FC3EA8 /* UIView+AddSubview.swift */,
 				1BB094901D4B7D4800890548 /* exampleview.xib */,
+				1B3F2DF01D4F91C800D22E13 /* PopupConfigurator.swift */,
+				1B3F2DF21D4F976000D22E13 /* CustomButton.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -238,12 +263,15 @@
 				1B47D5911D46163500FC3EA8 /* ViewController.swift in Sources */,
 				1B47D5A91D477CF500FC3EA8 /* GenericPopupViewController.swift in Sources */,
 				1B47D58F1D46163500FC3EA8 /* AppDelegate.swift in Sources */,
-				1B47D5A11D46262C00FC3EA8 /* PopupViewController.swift in Sources */,
 				1B47D5AD1D47817E00FC3EA8 /* UIView+AddSubview.swift in Sources */,
 				1B47D5A51D4647FE00FC3EA8 /* TransitionFactory.swift in Sources */,
+				1B3F2DF51D4F9C3C00D22E13 /* PopupConfigurationManager.swift in Sources */,
+				1B3F2DF11D4F91C800D22E13 /* PopupConfigurator.swift in Sources */,
 				1B47D5A31D463C3200FC3EA8 /* TransitionHandler.swift in Sources */,
+				1B3F2DF31D4F976000D22E13 /* CustomButton.swift in Sources */,
 				1B47D5AB1D477D9500FC3EA8 /* PopupAction.swift in Sources */,
 				1B47D5A71D47417E00FC3EA8 /* PresentationController.swift in Sources */,
+				1B3F2DEE1D4F78E600D22E13 /* PopupShowable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

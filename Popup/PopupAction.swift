@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PopupAction {
+struct PopupAction {
     var title: String
     var color: UIColor
     var action: () -> Void
