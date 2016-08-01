@@ -11,6 +11,8 @@ import UIKit
 
 class TransitionHandler: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     
+    var popupShouldBeDismissable = true
+    
     private var transitionDuration = 1.0
     private var presenting = false
     private var transitionAnimation: ((context: UIViewControllerContextTransitioning, presenting: Bool, duration: NSTimeInterval) -> Void)
@@ -24,9 +26,9 @@ class TransitionHandler: NSObject, UIViewControllerAnimatedTransitioning, UIView
         self.transitionAnimation = transitionAnimation
         self.transitionDuration = duration
     }
-
+    
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        let presentationController = PresentationController(presentedViewController: presented, presentingViewController: presenting)
+        let presentationController = PresentationController(presentedViewController: presented, presentingViewController: presenting, popupDismissable: popupShouldBeDismissable)
         return presentationController
     }
     

@@ -11,13 +11,15 @@ import UIKit
 class PresentationController: UIPresentationController, UIAdaptivePresentationControllerDelegate {
     var chromeView = UIView()
     
-    override init(presentedViewController: UIViewController, presentingViewController: UIViewController) {
+    init(presentedViewController: UIViewController, presentingViewController: UIViewController, popupDismissable: Bool) {
         super.init(presentedViewController: presentedViewController, presentingViewController: presentingViewController)
         chromeView.backgroundColor = UIColor(white: 0.0, alpha: 0.4)
         chromeView.alpha = 0.0
         
-        let tapGR = UITapGestureRecognizer(target: self, action: #selector(chromeViewTapped))
-        chromeView.addGestureRecognizer(tapGR)
+        if(popupDismissable) {
+            let tapGR = UITapGestureRecognizer(target: self, action: #selector(chromeViewTapped))
+            chromeView.addGestureRecognizer(tapGR)
+        }
     }
     
     func chromeViewTapped(gesture: UIGestureRecognizer) {

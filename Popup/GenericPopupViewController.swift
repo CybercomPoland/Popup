@@ -16,13 +16,23 @@ class GenericPopupViewController: UIViewController {
     private var buttonsContainer = UIView()
     private var actions: [PopupAction]!
     
+    var dismissable: Bool! {
+        didSet {
+            (self.transitioningDelegate as? TransitionHandler)?.popupShouldBeDismissable = dismissable
+        }
+    }
+    
     private let maxWidth: CGFloat = (UIScreen.mainScreen().bounds.width * 0.9)
     private let maxHeight: CGFloat = (UIScreen.mainScreen().bounds.height * 0.9)
     private let cornerRadius: CGFloat = 5.0
     private let mainBackgroundColor = UIColor.whiteColor()
     
-    convenience init(title: String, subtitle: String, actions: [PopupAction]) {
+    convenience init(title: String, subtitle: String, actions: [PopupAction], transitioningDelegate: UIViewControllerTransitioningDelegate, dismissable: Bool) {
         self.init()
+        self.transitioningDelegate = transitioningDelegate
+        self.dismissable = dismissable
+        (self.transitioningDelegate as? TransitionHandler)?.popupShouldBeDismissable = dismissable
+
         setupBasicView()
 
         let titleLabel = UILabel(frame: CGRectZero)
@@ -43,8 +53,12 @@ class GenericPopupViewController: UIViewController {
         scrollViewAndButtonsSetup(actions)
     }
     
-    convenience init(headerView: UIView, actions: [PopupAction]) {
+    convenience init(headerView: UIView, actions: [PopupAction], transitioningDelegate: UIViewControllerTransitioningDelegate, dismissable: Bool) {
         self.init()
+        self.transitioningDelegate = transitioningDelegate
+        self.dismissable = dismissable
+        (self.transitioningDelegate as? TransitionHandler)?.popupShouldBeDismissable = dismissable
+
         setupBasicView()
         headerView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -84,7 +98,6 @@ class GenericPopupViewController: UIViewController {
     
     private func setupBasicView() {
         self.modalPresentationStyle = .Custom
-
         mainContainer.translatesAutoresizingMaskIntoConstraints = false
         mainContainer.layer.cornerRadius = cornerRadius
         mainContainer.clipsToBounds = true
